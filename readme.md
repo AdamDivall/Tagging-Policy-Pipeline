@@ -4,12 +4,15 @@ The CloudFormation Template has been created to resolve a common issue of deploy
 
 The CloudFormation Stack will deploy the necessary resources to configure a pipeline that will be able to create or update tagging policies with AWS Organizations based on the JSON Files that are committed to AWS CodeCommit.
 
+The JSON Files that are part of the repository can be updated and modified to meet an organizations needs.
+
 ## Pre-Requisites and Installation
 
 ### Pre-Requisites
 
 1.  Clone the GitHub Repo to your local device.
 2.  Modify the varying tagging policy JSON files (Automation, Business, Operations, Security & Technical) as per your Organizations requirements.
+3.  Sign in to the AWS Organizations console in the Managment Account. On the Policies page, Select **Tag Policies** and Click **Enable**.
 
 ### Installation
 

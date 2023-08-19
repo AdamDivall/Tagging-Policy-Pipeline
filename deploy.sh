@@ -8,7 +8,6 @@ cd "$policies_folder"
 policies=($(ls *.json))
 # policies=("test" "")
 
-
 existing_policies=$(aws organizations list-policies --filter TAG_POLICY)
 echo "List of existing policies that: $existing_policies"
 # --query 'Policies[].[Name, Id]'
