@@ -199,6 +199,8 @@ Resources:
           Value: !Ref pTagTechnicalOwner
         - Key: BusinessUnit
           Value: !Ref pTagBusinessUnit
+        - Key: CostCenter
+          Value: !Ref pTagCostCenter
         - Key: BusinessImpact
           Value: !Ref pTagBusinessImpact
         - Key: EscalationPath
@@ -272,6 +274,8 @@ Resources:
           Value: !Ref pTagTechnicalOwner
         - Key: BusinessUnit
           Value: !Ref pTagBusinessUnit
+        - Key: CostCenter
+          Value: !Ref pTagCostCenter
         - Key: BusinessImpact
           Value: !Ref pTagBusinessImpact
         - Key: EscalationPath
@@ -377,6 +381,8 @@ Resources:
           Value: !Ref pTagTechnicalOwner
         - Key: BusinessUnit
           Value: !Ref pTagBusinessUnit
+        - Key: CostCenter
+          Value: !Ref pTagCostCenter
         - Key: BusinessImpact
           Value: !Ref pTagBusinessImpact
         - Key: EscalationPath
@@ -445,6 +451,8 @@ Resources:
           Value: !Ref pTagTechnicalOwner
         - Key: BusinessUnit
           Value: !Ref pTagBusinessUnit
+        - Key: CostCenter
+          Value: !Ref pTagCostCenter
         - Key: BusinessImpact
           Value: !Ref pTagBusinessImpact
         - Key: EscalationPath
@@ -651,6 +659,8 @@ Resources:
           Value: !Ref pTagTechnicalOwner
         - Key: BusinessUnit
           Value: !Ref pTagBusinessUnit
+        - Key: CostCenter
+          Value: !Ref pTagCostCenter
         - Key: BusinessImpact
           Value: !Ref pTagBusinessImpact
         - Key: EscalationPath
@@ -772,6 +782,8 @@ Resources:
             Value: !Ref pTagTechnicalOwner
           - Key: BusinessUnit
             Value: !Ref pTagBusinessUnit
+          - Key: CostCenter
+            Value: !Ref pTagCostCenter
           - Key: BusinessImpact
             Value: !Ref pTagBusinessImpact
           - Key: EscalationPath
@@ -826,7 +838,7 @@ Resources:
       QueuedTimeoutInMinutes: 480
       ServiceRole: !GetAtt rIamRoleBuildProject.Arn
       Source:
-        BuildSpec: !Sub |
+        BuildSpec: |
           version: 0.2
           phases:
             install:
@@ -874,6 +886,8 @@ Resources:
           Value: !Ref pTagTechnicalOwner
         - Key: BusinessUnit
           Value: !Ref pTagBusinessUnit
+        - Key: CostCenter
+          Value: !Ref pTagCostCenter
         - Key: BusinessImpact
           Value: !Ref pTagBusinessImpact
         - Key: EscalationPath
@@ -966,6 +980,8 @@ Resources:
           Value: !Ref pTagTechnicalOwner
         - Key: BusinessUnit
           Value: !Ref pTagBusinessUnit
+        - Key: CostCenter
+          Value: !Ref pTagCostCenter
         - Key: BusinessImpact
           Value: !Ref pTagBusinessImpact
         - Key: EscalationPath
