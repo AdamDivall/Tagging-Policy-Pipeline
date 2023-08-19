@@ -1,0 +1,50 @@
+{
+    "tags": {
+        "Name": {
+            "tag_key": {
+                "@@assign": "Name"
+            }
+        },
+        "Environment": {
+            "tag_key": {
+                "@@assign": "Environment"
+            },
+            "tag_value": {
+                "@@assign": [
+                    "Production",
+                    "Non-Production"
+                ]
+            }
+        },
+        "SDLC": {
+            "tag_key": {
+                "@@assign": "SDLC"
+            },
+            "tag_value": {
+                "@@assign": [
+                    "Prod",
+                    "Pre-Prod",
+                    "UAT",
+                    "SIT",
+                    "Test",
+                    "Dev"
+                ]
+            }
+        },
+        "ApplicationName": {
+            "tag_key": {
+                "@@assign": "ApplicationName"
+            }
+        },
+        "ApplicationRole": {
+            "tag_key": {
+                "@@assign": "ApplicationRole"
+            }
+        },
+        "Cluster": {
+            "tag_key": {
+                "@@assign": "Cluster"
+            }
+        }
+    }
+}

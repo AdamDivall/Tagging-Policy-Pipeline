@@ -1,0 +1,34 @@
+{
+    "tags": {
+        "map-migrated": {
+            "tag_key": {
+                "@@assign": "map-migrated"
+            }
+        },
+        "ProjectName": {
+            "tag_key": {
+                "@@assign": "ProjectName"
+            }
+        },
+        "ProductOwner": {
+            "tag_key": {
+                "@@assign": "ProductOwner"
+            }
+        },
+        "TechnicalOwner": {
+            "tag_key": {
+                "@@assign": "TechnicalOwner"
+            }
+        },
+        "CostCenter": {
+            "tag_key": {
+                "@@assign": "CostCenter"
+            }
+        },
+        "BusinessUnit": {
+            "tag_key": {
+                "@@assign": "BusinessUnit"
+            }
+        }
+    }
+}

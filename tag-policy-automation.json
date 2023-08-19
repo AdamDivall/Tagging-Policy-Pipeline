@@ -1,0 +1,86 @@
+{
+    "tags": {
+        "HoursOfOperation": {
+            "tag_key": {
+                "@@assign": "HoursOfOperation"
+            },
+            "tag_value": {
+                "@@assign": [
+                    "24x7",
+                    "16x5",
+                    "9x5"
+                ]
+            }
+        },
+        "MaintenanceWindow": {
+            "tag_key": {
+                "@@assign": "MaintenanceWindow"
+            }
+        },
+        "PatchGroup": {
+            "tag_key": {
+                "@@assign": "PatchGroup"
+            }
+        },
+        "BackupSchedule": {
+            "tag_key": {
+                "@@assign": "BackupSchedule"
+            }
+        },
+        "OptOut": {
+            "tag_key": {
+                "@@assign": "OptOut"
+            },
+            "tag_value": {
+                "@@assign": [
+                    "True",
+                    "False"
+                ]
+            }
+        },
+        "DeploymentMethod": {
+            "tag_key": {
+                "@@assign": "DeploymentMethod"
+            },
+            "tag_value": {
+                "@@assign": [
+                    "CloudFormation",
+                    "Terraform",
+                    "Manual"
+                ]
+            }
+        },
+        "Attach-to-tgw": {
+            "tag_key": {
+                "@@assign": "Attach-to-tgw"
+            },
+            "tag_value": {
+                "@@assign": [
+                    "True",
+                    "False"
+                ]
+            }
+        },
+        "Associate-with": {
+            "tag_key": {
+                "@@assign": "Associate-with"
+            },
+            "tag_value": {
+                "@@assign": [
+                    "Shared",
+                    "Prod",
+                    "Pre-Prod",
+                    "UAT",
+                    "SIT",
+                    "Test",
+                    "Dev"
+                ]
+            }
+        },
+        "Propagate-to": {
+            "tag_key": {
+                "@@assign": "Propagate-to"
+            }
+        }
+    }
+}

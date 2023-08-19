@@ -1,0 +1,27 @@
+{
+    "tags": {
+        "BusinessImpact": {
+            "tag_key": {
+                "@@assign": "BusinessImpact"
+            },
+            "tag_value": {
+                "@@assign": [
+                    "Critical",
+                    "High",
+                    "Medium",
+                    "Low"
+                ]
+            }
+        },
+        "EscalationPath": {
+            "tag_key": {
+                "@@assign": "EscalationPath"
+            }
+        },
+        "KnowledgeBase": {
+            "tag_key": {
+                "@@assign": "KnowledgeBase"
+            }
+        }
+    }
+}
