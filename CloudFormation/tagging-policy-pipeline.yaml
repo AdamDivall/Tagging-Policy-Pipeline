@@ -306,7 +306,7 @@ Resources:
             Action:
               - "s3:PutObject"
             Resource:
-              - !Sub "arn:aws:s3:::${rS3PipelineArtifactBucket}/*"
+              - !Sub "arn:${AWS::Partition}:s3:::${rS3PipelineArtifactBucket}/*"
             Condition:
               StringNotEquals:
                 s3:x-amz-server-side-encryption: "aws:kms"
@@ -314,8 +314,8 @@ Resources:
             Effect: "Deny"
             Principal: "*"
             Resource:
-              - !Sub "arn:aws:s3:::${rS3PipelineArtifactBucket}"
-              - !Sub "arn:aws:s3:::${rS3PipelineArtifactBucket}/*"
+              - !Sub "arn:${AWS::Partition}:s3:::${rS3PipelineArtifactBucket}"
+              - !Sub "arn:${AWS::Partition}:s3:::${rS3PipelineArtifactBucket}/*"
             Condition:
               Bool:
                 aws:SecureTransport: false
@@ -331,7 +331,7 @@ Resources:
           - Sid: "Enable IAM User Permissions"
             Effect: "Allow"
             Principal:
-              AWS: !Sub "arn:aws:iam::${AWS::AccountId}:root"
+              AWS: !Sub "arn:${AWS::Partition}:iam::${AWS::AccountId}:root"
             Action:
               - "kms:*"
             Resource:
@@ -702,7 +702,7 @@ Resources:
               - "s3:GetBucketAcl"
               - "s3:GetBucketLocation"
             Resource:
-              - !Sub "arn:aws:s3:::${rS3PipelineArtifactBucket}/*"
+              - !Sub "arn:${AWS::Partition}:s3:::${rS3PipelineArtifactBucket}/*"
           - Effect: "Allow"
             Action:
               - "codecommit:GitPull"
@@ -716,7 +716,7 @@ Resources:
               - "codebuild:BatchPutTestCases"
               - "codebuild:BatchPutCodeCoverages"
             Resource:
-              - !Sub "arn:aws:codebuild:${AWS::Region}:${AWS::AccountId}:report-group/*"
+              - !Sub "arn:${AWS::Partition}:codebuild:${AWS::Region}:${AWS::AccountId}:report-group/*"
           - Effect: "Allow"
             Action:
               - "kms:DescribeKey"
@@ -814,7 +814,7 @@ Resources:
             Action:
               - "codepipeline:StartPipelineExecution"
             Resource:
-              - !Sub "arn:aws:codepipeline:${AWS::Region}:${AWS::AccountId}:${rCodePipelineTagPolicy}"
+              - !Sub "arn:${AWS::Partition}:codepipeline:${AWS::Region}:${AWS::AccountId}:${rCodePipelineTagPolicy}"
   rCodeBuildTagPolicy:
     Type: AWS::CodeBuild::Project
     Properties:
@@ -824,7 +824,7 @@ Resources:
       Cache:
         Type: "NO_CACHE"
       Description: "Project to carry out Implementation of AWS Organizations Tag Policies"
-      EncryptionKey: !Sub "arn:aws:kms:${AWS::Region}:${AWS::AccountId}:alias/aws/s3"
+      EncryptionKey: !Sub "arn:${AWS::Partition}:kms:${AWS::Region}:${AWS::AccountId}:alias/aws/s3"
       Environment:
         ComputeType: "BUILD_GENERAL1_SMALL"
         Image: "aws/codebuild/standard:7.0"
